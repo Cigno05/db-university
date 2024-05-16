@@ -14,3 +14,11 @@ FROM `departments`
 INNER JOIN `degrees`
 ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY `departments`.`name`;
+
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+
+SELECT COUNT(*) AS `teacher_num`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`;
