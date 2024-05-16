@@ -22,3 +22,10 @@ GROUP BY `departments`.`name`;
 SELECT COUNT(*) AS `teacher_num`, `office_address`
 FROM `teachers`
 GROUP BY `office_address`;
+
+
+1. Contare quanti iscritti ci sono stati ogni anno
+
+SELECT count(*), YEAR(students.enrolment_date) as anno
+FROM `students`
+GROUP BY YEAR(students.enrolment_date);
